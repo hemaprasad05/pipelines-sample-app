@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hemaprasadpipelinessampleapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hemaprasadpipelinessampleapp
+  template:
+    metadata:
+      labels:
+        app: hemaprasadpipelinessampleapp 
+    spec:
+      containers:
+        - name: hemaprasadpipelinessampleapp 
+          image: kubernetes010.azurecr.io/hemaprasadpipelinessampleapp
+          ports:
+          - containerPort: 8080
